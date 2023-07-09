@@ -5,6 +5,7 @@ FROM graphcore/pytorch:3.3.0-ubuntu-20.04-20230703
 #ARG DEBIAN_FRONTEND=noninteractive
 
 ENV CUDA_VISIBLE_DEVICES="-1"
+ENV Geographic_area=4
 
 RUN apt-get update && apt-get install -y \
     git \
