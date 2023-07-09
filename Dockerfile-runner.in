@@ -3,9 +3,12 @@ FROM BASE_DOCKER_IMAGE_SUBST
 LABEL imagetype="runtime-h2ogpt"
 LABEL maintainer="H2O.ai <ops@h2o.ai>"
 
+ENV CUDA_VISIBLE_DEVICES="-1"
+
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TRANSFORMERS_CACHE=/h2ogpt_env/.cache
-ENV HF_MODEL=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3
+#ENV HF_MODEL=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3
+ENV HF_MODEL=TheBloke/wizardLM-7B-GGML
 
 COPY run-gpt.sh /run-gpt.sh
 
