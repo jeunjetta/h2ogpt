@@ -3,7 +3,7 @@ services:
     entrypoint:
     - sleep
     - infinity
-    image: docker/dev-environments-default:stable-1
+    image: graphcore/pytorch:3.3.0-ubuntu-20.04-20230703
     init: true
     volumes:
     - type: bind
